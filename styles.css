@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #b885c1,#7a3b84);
+    color: #f8f5ef;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+
+
+p {
+    font-size: 1.45em;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f8f5ef;
+}
+
+input::placeholder {
+    color: rgba(248, 245, 239, 0.7);
+}
+
+button {
+    background-color: #f8f5ef;
+    color: #7a3b84;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e8e5df;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #f8f5ef;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #e8e5df;
+}
+
+.podcastLinks a {
+    color: #f8f5ef;
+    margin: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.podcastLinks a:hover {
+    color: #e8e5df;
+}
+
+.container {
+    text-align: center;
+    margin: 20px auto;
+}
+.container img {
+    max-width: 400px; /* Adjust as needed */
+    margin-bottom: 5px;
+}
+.social-links i {
+    font-size: 1.3em; /* Smaller font size for social media icons */
+    margin: 5px;
+}

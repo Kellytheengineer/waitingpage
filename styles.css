@@ -19,8 +19,9 @@ h1 {
     font-size: 2em;
     margin-bottom: 30px;
     white-space: nowrap;
+    position: relative;
+    right: 20px; /* Adjust this value to shift the text to the right */
 }
-
 
 p {
     font-size: 1.45em;

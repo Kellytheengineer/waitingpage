@@ -1,18 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('subscribe-form');
-    const messageElement = document.getElementById('message');
+document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const name = document.getElementById('name').value;
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-
-        // Here you would typically send this data to your server
-        console.log('Submitted:', { name, email });
-
-        // For now, we'll just show a success message
-        messageElement.textContent = 'Thank you for subscribing! We\'ll notify you when we launch.';
-        form.reset();
+    fetch('https://hooks.zapier.com/hooks/catch/20911541/2iqxb1k/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            email: email,
+            name: name
+        })
+    })
+    .then(response => {
+        alert('Successfully subscribed!');
+        this.reset();
+    })
+    .catch(error => {
+        alert('Subscription failed. Please try again.');
     });
 });
 

@@ -1,3 +1,4 @@
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #b885c1, #7a3b84);
@@ -12,27 +13,25 @@ body {
 .container {
     text-align: center;
     padding: 20px;
-    max-width: 90%; /* Adjust for smaller screens */
+    max-width: 90%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
+    margin-top: 10px;
     font-size: 2em;
-    margin-bottom: 30px;
-    white-space: nowrap;
+    margin-bottom: 10px;
 }
 
-p {
-    font-size: 1.45em;
-    margin-bottom: 30px;
-}
-
+/* Form Styling */
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
-    max-width: 400px; /* Limit width for larger screens */
+    max-width: 400px;
     margin: auto;
 }
 
@@ -42,12 +41,13 @@ button {
     font-size: 1.2em;
     border: none;
     border-radius: 5px;
+    width: 85%;
+    margin-bottom: 10px;
 }
 
 input {
     background-color: rgba(255, 255, 255, 0.1);
     color: #f8f5ef;
-    width: 100%;
 }
 
 input::placeholder {
@@ -65,52 +65,61 @@ button:hover {
     background-color: #e8e5df;
 }
 
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
+/* Social and Podcast Links */
+.social-links a, .podcast-links a {
     color: #f8f5ef;
     margin: 0 10px;
-    text-decoration: none;
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: #e8e5df;
-}
-
-.podcastLinks a {
-    color: #f8f5ef;
-    margin: 10px;
+    font-size: 2em;
     text-decoration: none;
     transition: color 0.3s;
+    margin-bottom: 20px;
 }
 
-.podcastLinks a:hover {
+.social-links a:hover, .podcast-links a:hover {
     color: #e8e5df;
 }
 
 .container img {
-    max-width: 100%; /* Responsive image size */
+    max-width: 85%;
     height: auto;
-    margin-bottom: 20px;
+    margin: 0; /* Remove the bottom margin */
 }
 
-.podcastLinks i,
-.social-links i {
-    font-size: 1.5em; /* Uniform size for icons */
-    margin: 10px;
+/* Media Kit Button */
+.media-kit-button {
+    display: inline-block;
+    background-color: #b885c1;
+    color: #f8f5ef;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
 }
 
+.media-kit-button:hover {
+    background-color: #a074a1;
+}
+
+button.subscribe {
+    background-color: #f8f5ef; /* Background color */
+    color: #b885c1; /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Adding a transition for smooth color changes */
+}
+
+button.subscribe:hover {
+    background-color: #e8e5df; /* Slightly darker background on hover */
+    color: #7a3b84; /* Darker text color on hover */
+}
+
+
+/* Responsive Design */
 @media (max-width: 768px) {
     h1 {
         font-size: 1.5em;
-    }
-
-    p {
-        font-size: 1em;
     }
 
     input,
@@ -118,25 +127,11 @@ button:hover {
         font-size: 1em;
     }
 
-    .podcastLinks i,
-    .social-links i {
+    .social-links a, .podcast-links a {
         font-size: 1.5em;
     }
-}
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-    }
-
-    form {
-        max-width: 300px;
-    }
-
-    .podcastLinks i,
-    .social-links i {
-        font-size: 1.5em;
-        margin: 5px;
+    .container img {
+        max-width: 100%;
     }
 }

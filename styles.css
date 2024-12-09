@@ -90,8 +90,8 @@ button:hover {
     display: inline-block;
     background-color: #b885c1;
     color: #f8f5ef;
-    padding: 10px 20px;
-    font-size: 1.2em;
+    padding: 8px 16px;  /* Reduced padding */
+    font-size: 1em;     /* Set font-size to 1em */
     border: none;
     border-radius: 5px;
     text-align: center;

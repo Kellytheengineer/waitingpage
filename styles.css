@@ -54,7 +54,28 @@ input::placeholder {
     color: rgba(248, 245, 239, 0.7);
 }
 
-button {
+.subscribe {
+    background-color: #f8f5ef;
+    color: #7a3b84;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: background-color 0.3s, color 0.3s, transform 0.1s;
+    letter-spacing: 1px;
+}
+
+.subscribe:hover {
+    background-color: #b885c1;
+    color: #f8f5ef;
+    transform: scale(1.05);
+}
+
+.subscribe:active {
+    background-color: #7a3b84;
+    color: #f8f5ef;
+    transform: scale(0.95);
+}
+
+.button {
     background-color: #f8f5ef;
     color: #7a3b84;
     cursor: pointer;
@@ -62,8 +83,10 @@ button {
 }
 
 button:hover {
-    background-color: #e8e5df;
+        background-color: #e8e5df;
+        color: #b885c1;
 }
+
 
 /* Social and Podcast Links */
 .social-links a, .podcast-links a {
@@ -76,7 +99,7 @@ button:hover {
 }
 
 .social-links a:hover, .podcast-links a:hover {
-    color: #e8e5df;
+    color:#b885c1;
 }
 
 .container img {
@@ -85,41 +108,26 @@ button:hover {
     margin: 0; /* Remove the bottom margin */
 }
 
-/* Media Kit Button */
-.media-kit-button {
+.download-button, a.download-button {
     display: inline-block;
     background-color: #b885c1;
     color: #f8f5ef;
-    padding: 6px 12px;  
-    font-size: 0.9em;    
-    line-height: 1.2;    
-    width: auto;         
-    height: auto;        
+    padding: 10px 20px;
+    font-size: 1.5em;
     border: none;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    margin-top: 10px;
-}
-
-.media-kit-button:hover {
-    background-color: #a074a1;
-}
-
-
-button.subscribe {
-    background-color: #f8f5ef; /* Background color */
-    color: #b885c1; /* Text color */
+    width: auto;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Adding a transition for smooth color changes */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 10px 0;
 }
 
-button.subscribe:hover {
-    background-color: #e8e5df; /* Slightly darker background on hover */
-    color: #7a3b84; /* Darker text color on hover */
+.download-button:hover, a.download-button:hover {
+    background-color: #e8e5df;
+    color: #b885c1;
 }
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     h1 {
@@ -136,6 +144,7 @@ button.subscribe:hover {
     }
 
     .container img {
-        max-width: 100%;
+        max-width: 80%;
     }
+   
 }
